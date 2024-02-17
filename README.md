@@ -1,1 +1,2 @@
-This short project was to make me ramenber/learn how to handle simple functions, statments and key words in kotlin.
+# Jokenpo Game
+This short project objective was to make me ramember/learn how to handle simple functions, statements and key words in kotlin.
