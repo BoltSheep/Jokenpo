@@ -2,12 +2,15 @@ package com.example.jokenpo
 
 fun main() {
 
-    var playerChoice: Weapon
+    var playerChoice = Weapon()
+    var continuePlaying = ""
     var isInputValid = false
+    var stopPlaying = false
 
     val randomNumber = (1..3).random()
 
-    println("Jokenpo! Your choice will be: ")
+    System.out.flush()
+    println("Jokenpo! Your choice will be? ")
 
     while (!isInputValid) {
         isInputValid = true
@@ -27,11 +30,106 @@ fun main() {
         }
     }
 
-    var computerChoice: Any = when (randomNumber) {
+    var computerChoice: Weapon = when (randomNumber) {
         1 -> Rock
         2 -> Paper
         3 -> Scissor
-        else -> {}
+        else -> {
+            Weapon()
+        }
+    }
+
+    println("the computer chose: ${computerChoice.name} so...")
+
+    if (playerChoice == Rock) {
+        if (computerChoice == Paper) {
+            println("\t\tYOU LOSE!")
+            println("Play Again? (Y/N)")
+            continuePlaying = readln().lowercase()
+            if (continuePlaying == "y" || continuePlaying == "yes") {
+                stopPlaying = false
+            } else {
+                println("\nOk, Bye")
+            }
+        } else if (computerChoice == Scissor) {
+            println("\t\tYOU WON!")
+            println("Play Again? (Y/N)")
+            continuePlaying = readln().lowercase()
+            if (continuePlaying == "y" || continuePlaying == "yes") {
+                stopPlaying = false
+            } else {
+                println("\nOk, Bye")
+            }
+        } else {
+            println("\t\tIT`S A DRAW")
+            println("Play Again? (Y/N)")
+            continuePlaying = readln().lowercase()
+            if (continuePlaying == "y" || continuePlaying == "yes") {
+                stopPlaying = false
+            } else {
+                println("\nOk, Bye")
+            }
+        }
+    }
+    if (playerChoice == Paper) {
+        if (computerChoice == Scissor) {
+            println("\t\tYOU LOSE!")
+            println("Play Again? (Y/N)")
+            continuePlaying = readln().lowercase()
+            if (continuePlaying == "y" || continuePlaying == "yes") {
+                stopPlaying = false
+            } else {
+                println("\nOk, Bye")
+            }
+        } else if (computerChoice == Rock) {
+            println("\t\tYOU WON!")
+            println("Play Again? (Y/N)")
+            continuePlaying = readln().lowercase()
+            if (continuePlaying == "y" || continuePlaying == "yes") {
+                stopPlaying = false
+            } else {
+                println("\nOk, Bye")
+            }
+        } else {
+            println("\t\tIT`S A DRAW")
+            println("Play Again? (Y/N)")
+            continuePlaying = readln().lowercase()
+            if (continuePlaying == "y" || continuePlaying == "yes") {
+                stopPlaying = false
+            } else {
+                println("\nOk, Bye")
+            }
+        }
+    }
+    if (playerChoice == Scissor) {
+        if (computerChoice == Paper) {
+            println("\t\tYOU LOSE!")
+            println("Play Again? (Y/N)")
+            continuePlaying = readln().lowercase()
+            if (continuePlaying == "y" || continuePlaying == "yes") {
+                stopPlaying = false
+            } else {
+                println("\nOk, Bye")
+            }
+        } else if (computerChoice == Paper) {
+            println("\t\tYOU WON!")
+            println("Play Again? (Y/N)")
+            continuePlaying = readln().lowercase()
+            if (continuePlaying == "y" || continuePlaying == "yes") {
+                stopPlaying = false
+            } else {
+                println("\nOk, Bye")
+            }
+        } else {
+            println("\t\tIT`S A DRAW")
+            println("Play Again? (Y/N)")
+            continuePlaying = readln().lowercase()
+            if (continuePlaying == "y" || continuePlaying == "yes") {
+                stopPlaying = false
+            } else {
+                println("\nOk, Bye")
+            }
+        }
     }
 
 
